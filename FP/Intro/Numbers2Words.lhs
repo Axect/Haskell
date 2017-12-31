@@ -36,3 +36,11 @@ units, teens, tens :: [String] = [[Char]]
 >   | h==0 = units!!h ++ " thousand"
 >   | otherwise = convert3 m ++ " thousand" ++ link h ++ convert3 h
 >   where (m,h) = (n `div` 1000, n `mod` 1000)
+
+> convert :: Int -> String
+> convert n
+>   | n < 10 = convert1 n
+>   | n < 100 = convert2 n
+>   | n < 1000 = convert3 n
+>   | n < 1000000 = convert6 n
+
