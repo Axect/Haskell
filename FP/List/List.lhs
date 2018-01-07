@@ -52,6 +52,11 @@ Example
 
 > [x | x <- [1..100], isPrime x]
 
+> triadsPrime :: Int -> [(Int, Int, Int)]
+> triadsPrime n =[(x,y,z) | x <- [1..n], y <- [1..n], z <- [1..n], isPrime x, x^2+y^2 ==z^2]
+
+> triadsPrime 1000
+
 > triads :: Int -> [(Int, Int, Int)]
 > triads n = [(x,y,z) | x <- [1..n], y <- [1..n], z <- [1..n], x^2 + y^2 == z^2]
 
@@ -69,3 +74,34 @@ Example
 >   fmap f (Fork u v) = Fork (fmap f u) (fmap f v)
 
 > fmap (+1) [2,3,4]
+
+# Zip
+
+> zip :: [a] -> [b] -> [(a,b)]
+> zip (x:xs) (y:ys) = (x,y):zip xs ys
+> zip _ _           = []
+
+> zip [1,2,3,4] [5,6,7,8]
+
+> zipWith :: (a -> b -> c) -> [a] -> [b] -> [c]
+> zipWith f (x:xs) (y:ys) = f x y : zipWith f xs ys
+> zipWith f _ _           = []
+
+In fact, zip = zipWith (,) : (,) a b = (a,b)
+
+> (,) 1 2
+
+Example of zipWith
+
+1) Naive definition of nondec (= a list is in nondecreasing order)
+
+> nondec :: (Ord a) => [a] -> Bool
+> nondec []         = True
+> nondec [x]        = True
+> nondec (x:y:xs)   = (x <= y) && nondec (y:xs)
+
+> nondec [1,1,2,3,5,5]
+
+2) Short definition using zipWith
+
+> nondec xs = and (zipWith (<=) xs (tail xs))

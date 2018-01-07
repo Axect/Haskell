@@ -33,7 +33,7 @@ We can define floor using this until function.
 
 > data Nat = Zero | Succ Nat
 
-(Succeed n means n+1 (next to n))
+(Successor n means n+1 (next to n))
 It means Zero, Succ(Zero), Succ(Succ(Zero)) are Natural numbers.
 
 > instance Eq Nat where
