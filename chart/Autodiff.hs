@@ -1,5 +1,7 @@
 module Autodiff where
 
+import GHC.Float
+
 data Dual a = Dual a a deriving (Eq, Read, Show)
 
 instance Num a => Num (Dual a) where
@@ -26,3 +28,8 @@ instance (Eq a, Floating a) => Floating (Dual a) where
   (Dual u 0)**(Dual v v') = Dual (u**v) (u**v * log v * v')
   (Dual u u')**(Dual v v') = Dual (u**v) (v'**(log u) + (v * u') / u)
 
+takeDual :: Num a => Dual a -> a
+takeDual (Dual _ y) = y
+
+--dual2Double :: (Eq a, Floating a) => Dual a -> Double
+--dual2Double t = float2Double $ takeDual t
