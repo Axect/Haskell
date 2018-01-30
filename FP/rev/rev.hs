@@ -1,6 +1,6 @@
 main :: IO()
 main = do
-  let result = [x | x <- [1..10000000], checkMod x]
+  let result = [x | x <- [1..1000000], checkMod x]
   print $ result
 
 eval :: [Integer] -> Integer
@@ -15,4 +15,4 @@ mod' n | n>=10 = n `mod` 10 : mod' (n `div` 10)
        | n < 10 = [n]
 
 checkMod :: Integer -> Bool
-checkMod n = eval (reverse $ mod' n) == 2 * (eval $ rev (reverse $ mod' n))
+checkMod n = eval (reverse $ mod' n) == 4 * (eval $ rev (reverse $ mod' n))
