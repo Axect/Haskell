@@ -30,6 +30,6 @@ genPerm mat = permutations ([1..l]::Column) where l = fromIntegral $ length(mat)
 
 -- det A = \sum_{\sigma \in S_n} sgn(\sigma) * \product_{i=1}^n a_{i,\sigma_i}
 det :: Matrix -> Double
-det mat = sum [sgn sig * product [mat!!i!!(sig'!!i) | i <- [0..1]] | sig <- g, let sig' = map (floor) $ map (+(-1)) sig]
+det mat = sum [sgn sig * product [mat!!i!!(sig'!!i) | i <- [0..(l-1)]] | sig <- g, let sig' = map (floor) $ map (+(-1)) sig]
   where g = genPerm mat -- [[Double]]
         l = length (mat)
