@@ -19,8 +19,8 @@ dropAt n mat | n/=(length mat-1) =  ys ++ tail zs
 
 -- pw : piecewise
 pwDet :: Int -> Matrix -> Double
-pwDet n [[a]] = a
-pwDet n mat   = (-1)^n * head (mat!!n) * foldr (+) 0 [pwDet m mat2 | m <- [0..(length mat2 - 1)]] where mat2 = minorM n mat
+pwDet _ [[a]] = a
+pwDet n mat   = (-1)^n * head (mat!!n) * sum [pwDet m mat2 | m <- [0..(length mat2 - 1)]] where mat2 = minorM n mat
 
 det :: Matrix -> Double
 det mat = foldr (+) 0 [pwDet n mat | n <- [0..(length mat - 1)]]
