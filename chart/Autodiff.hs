@@ -52,3 +52,8 @@ instance Floating Dual where
   (**) (Dual u u') (Dual v v')    = Dual (u ** v) (u ** v * (v' * (log u) + (v * u' / u)))
   logBase (Dual u u') (Dual v v') = Dual (logBase u v) (((log v) * u' / u - (log u) * v' / v) / ((log u) ** 2))
 
+instance Ord Dual where
+  (<) (Dual u _) (Dual v _) = u < v
+  (>) (Dual u _) (Dual v _) = u > v
+  compare (Dual u _) (Dual v _) = u `compare` v
+
