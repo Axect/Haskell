@@ -1,6 +1,5 @@
 module Test(main) where
 
 main :: IO()
-main = do {
+main =
     putStrLn "Hello, World!"
-}
