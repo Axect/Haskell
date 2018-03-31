@@ -1,3 +1,11 @@
+module Test where
+
+main :: IO ()
+main = do
+  let a = Vector [1,2,3]
+  putStbrLn (show a)
+  
+
 double x = x + x
 quadruple x = double (double x)
 
@@ -23,3 +31,6 @@ abs n | n >=0 = n
 signum n | n > 0 = 1
          | n < 0 = -1
          | otherwise = 0
+
+data Vector = Vector [Int] deriving (Show)
+
