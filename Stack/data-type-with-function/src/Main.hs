@@ -10,7 +10,7 @@ main = do
 
   let idF = compose squareF sqrtF
 
-  putStrLn "Composeing square and square root fnuctions"
+  putStrLn "Composing square and square root fnuctions"
   putStrLn "is an identity. Applying a value should not change it"
   print $ apply idF 3
 
