@@ -18,7 +18,7 @@ instance Num Nat where
     | otherwise = Succ (fromInteger (x-1))
 
 exp :: Num a => a -> Nat -> a
-exp x Zero = 1
+exp x Zero     = 1
 exp x (Succ n) = x * exp x n -- Like Factorial
 
 -- We want to prove exp x (m+n) = exp x m * exp x n
