@@ -35,3 +35,5 @@ apply (Func f) = f
 newtype Fix f = Fix (f (Fix f))
 
 data Ghost a = Ghost deriving Show
+
+
