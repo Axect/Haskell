@@ -1,0 +1,163 @@
+
+==================== FINAL INTERFACE ====================
+2018-04-04 07:19:08.981857513 UTC
+
+interface main:Main 8022
+  interface hash: b61666725cbc5826468778c95b2c3054
+  ABI hash: 5f3db9dc26f25676f3c03b32de66302f
+  export-list hash: b48bc59df4717b16dceb4e63204e8951
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 831851bf4debb95ed35e73aa3905c673
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Main.main
+  Main.safeDiv
+  Main.safeDiv1
+  Main.safeOperation
+module dependencies:
+package dependencies: base-4.10.1.0* ghc-prim-0.5.1.1
+                      integer-gmp-1.0.1.0
+orphans: base-4.10.1.0:GHC.Float base-4.10.1.0:GHC.Base
+family instance modules: base-4.10.1.0:Control.Applicative
+                         base-4.10.1.0:Data.Either base-4.10.1.0:Data.Functor.Const
+                         base-4.10.1.0:Data.Functor.Identity base-4.10.1.0:Data.Monoid
+                         base-4.10.1.0:Data.Type.Equality base-4.10.1.0:GHC.Generics
+                         base-4.10.1.0:GHC.IO.Exception base-4.10.1.0:GHC.TypeLits
+                         base-4.10.1.0:GHC.TypeNats
+import  -/  base-4.10.1.0:Data.Maybe 07738c5485acb328136bb15596f8b845
+import  -/  base-4.10.1.0:GHC.Base 782fd99b5e36f3698a26179a49afca64
+import  -/  base-4.10.1.0:GHC.Num 6e1dc5d36d99a802edb39b92bb1923b8
+import  -/  base-4.10.1.0:GHC.Real 3c62834bc25e762eabc44149c4cc142d
+import  -/  base-4.10.1.0:GHC.Show 0a8ce2b5e533d1c2cfb7954e6736be45
+import  -/  base-4.10.1.0:Prelude 31945b7d0084063347fc52506d3a4020
+import  -/  base-4.10.1.0:System.IO 6e5bb580370d8d71dc5888f723cea4b4
+import  -/  ghc-prim-0.5.1.1:GHC.Classes 93e2660065dce9329577e83d76d8f0d4
+import  -/  ghc-prim-0.5.1.1:GHC.Types b1fd0716441595db508c1a74387bf394
+9d72b2fddb818bcd8919052935e0f1f3
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Main.$trModule3 Main.$trModule1) -}
+3108ceeaf5a318be844de422b45de9d8
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$trModule2) -}
+e5875966b74dad2d29772660b8a75e33
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Main"#) -}
+33bd129667974f0a0ba4a893af79107d
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$trModule4) -}
+d026be77cb9ced20e35a61514e0458aa
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("main"#) -}
+48786bac304ef22f3ad8f268b6ae4d60
+  $wsafeOperation ::
+    (a -> a -> GHC.Types.Bool)
+    -> (a -> a -> a)
+    -> GHC.Base.Maybe a
+    -> GHC.Base.Maybe a
+    -> GHC.Base.Maybe a
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,1*C1(C1(U))><L,1*C1(C1(U))><S,1*U><L,1*U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   (w :: a -> a -> GHC.Types.Bool)
+                   (w1 :: a -> a -> a)
+                   (w2 :: GHC.Base.Maybe a)
+                   (w3 :: GHC.Base.Maybe a) ->
+                 case w2 of wild {
+                   GHC.Base.Nothing -> GHC.Base.Nothing @ a
+                   GHC.Base.Just ipv
+                   -> case w3 of wild1 {
+                        GHC.Base.Nothing -> GHC.Base.Nothing @ a
+                        GHC.Base.Just ipv1
+                        -> case w ipv ipv1 of wild2 {
+                             GHC.Types.False -> GHC.Base.Just @ a (w1 ipv ipv1)
+                             GHC.Types.True -> GHC.Base.Nothing @ a } } }) -}
+45382869fccdc8575fe927b5bd9b3648
+  main :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+529073e95d7e97cca9b9c5c633464b51
+  main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U> -}
+5510fa2cfc7989247ee295903c8707a0
+  main2 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (GHC.TopHandler.runMainIO1
+                   @ ()
+                   Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+aaac2d3f525c590733d0141b1f98fb5c
+  safeDiv ::
+    GHC.Base.Maybe GHC.Types.Int
+    -> GHC.Base.Maybe GHC.Types.Int -> GHC.Base.Maybe GHC.Types.Int
+  {- Arity: 2, Strictness: <S,1*U><L,1*U>,
+     Unfolding: (\ (ds :: GHC.Base.Maybe GHC.Types.Int)
+                   (ds1 :: GHC.Base.Maybe GHC.Types.Int) ->
+                 case ds of wild {
+                   GHC.Base.Nothing -> GHC.Base.Nothing @ GHC.Types.Int
+                   GHC.Base.Just ipv
+                   -> case ds1 of wild1 {
+                        GHC.Base.Nothing -> GHC.Base.Nothing @ GHC.Types.Int
+                        GHC.Base.Just ipv1
+                        -> case ipv1 of wild2 { GHC.Types.I# x ->
+                           case x of wild3 {
+                             DEFAULT
+                             -> GHC.Base.Just
+                                  @ GHC.Types.Int
+                                  (case ipv of ww { GHC.Types.I# ww1 ->
+                                   case wild3 of wild4 {
+                                     DEFAULT
+                                     -> case GHC.Classes.divInt# ww1 wild4 of ww4 { DEFAULT ->
+                                        GHC.Types.I# ww4 }
+                                     -1#
+                                     -> case ww1 of wild5 {
+                                          DEFAULT
+                                          -> case GHC.Classes.divInt# wild5 -1# of ww4 { DEFAULT ->
+                                             GHC.Types.I# ww4 }
+                                          -9223372036854775808#
+                                          -> case GHC.Real.overflowError
+                                             ret_ty GHC.Types.Int
+                                             of {} } } })
+                             0# -> GHC.Base.Nothing @ GHC.Types.Int } } } }) -}
+37fa12e34575ae40c3f824d2685651e1
+  safeDiv1 ::
+    GHC.Base.Maybe GHC.Types.Int
+    -> GHC.Base.Maybe GHC.Types.Int -> GHC.Base.Maybe GHC.Types.Int
+  {- Arity: 2, Strictness: <S,1*U><L,1*U>,
+     Unfolding: (Main.safeDiv) -}
+d56279cde94e3cd6a0edeb82654cd7c4
+  safeOperation ::
+    GHC.Num.Num a =>
+    (a -> a -> GHC.Types.Bool)
+    -> (a -> a -> a)
+    -> GHC.Base.Maybe a
+    -> GHC.Base.Maybe a
+    -> GHC.Base.Maybe a
+  {- Arity: 5, HasNoCafRefs,
+     Strictness: <L,A><L,1*C1(C1(U))><L,1*C1(C1(U))><S,1*U><L,1*U>,
+     Inline: [0],
+     Unfolding: InlineRule (5, True, True)
+                (\ @ a
+                   (w :: GHC.Num.Num a)
+                   (w1 :: a -> a -> GHC.Types.Bool)
+                   (w2 :: a -> a -> a)
+                   (w3 :: GHC.Base.Maybe a)
+                   (w4 :: GHC.Base.Maybe a) ->
+                 Main.$wsafeOperation @ a w1 w2 w3 w4) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
