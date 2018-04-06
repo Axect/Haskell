@@ -18,7 +18,7 @@ main = do
 
 
 -- Monoid has two properties
--- 1. There is a default or empty value of the data type.
+-- 1. There is a default or empty value of the data type. (this is identity!)
 -- 2. Given two values of the data type, they can be combined to create a single value.
 
 data Option = Option { boolOption :: Bool
