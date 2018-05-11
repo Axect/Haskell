@@ -18,12 +18,12 @@ main = do
   let result = map fst (taylor n (init1, init2))
   BSL.writeFile "taylor.csv" $ encode (map extract result)
 
-g = 6.67259e-11
-m = 5.9736e24
-m0 = 1.19891e30
-au = 1.49597870691e11
+g     = 6.67259e-11
+m     = 5.9736e24
+m0    = 1.19891e30
+au    = 1.49597870691e11
 tstep = 43200
-n = 730 * 10
+n     = 730 * 10
 
 data Pos a = Cartesian a a a deriving (Show, Eq)
 type Vel a = Pos a
