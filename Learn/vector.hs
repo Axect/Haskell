@@ -1,5 +1,5 @@
-import Data.Functor
-import Control.Applicative
+import Data.Functor ()
+import Control.Applicative ()
 
 main :: IO ()
 main =
