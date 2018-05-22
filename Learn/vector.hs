@@ -21,6 +21,3 @@ instance (Num a) => Num (Vector a) where
     fromInteger n = fromInteger <$> Vector n n n
     signum v = signum <$> v 
     abs v = abs <$> v
-
-
-    
